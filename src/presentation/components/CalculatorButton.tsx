@@ -1,11 +1,12 @@
 import { Pressable, Text } from 'react-native';
 import { colors, globalStyles } from '../../config/theme/app-theme';
 
-export interface ButtonProps {
+interface CalculatorButtonProps {
   backgroundColor?: string;
   color?: string;
   label: string;
   isLarge?: boolean;
+  onPress?: () => void;
 }
 
 export const CalculatorButton = ({
@@ -13,9 +14,11 @@ export const CalculatorButton = ({
   backgroundColor = colors.darkGray,
   color = colors.textPrimary,
   isLarge = false,
-}: ButtonProps) => {
+  onPress,
+}: CalculatorButtonProps) => {
   return (
     <Pressable
+      onPress={() => onPress && onPress()}
       style={({ pressed }) => ({
         ...globalStyles.button,
         backgroundColor,

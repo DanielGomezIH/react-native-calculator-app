@@ -2,6 +2,7 @@
   "exportall.config.folderListener": [
     "/src/presentation/screens",
     "/src/presentation/components",
-    "/src/constants"
+    "/src/constants",
+    "/src/presentation/hooks"
   ]
 }
